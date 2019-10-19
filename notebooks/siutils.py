@@ -90,15 +90,15 @@ def Arctic_SIextent(SICONC_IN,CELLAREA_IN):
    ts_Arctic_extent = cellarea_extent.sum(dim=['i','j'])
    return ts_Arctic_extent
 
-def scatter_tas_SIE_linreg(TAS_ARCTIC_IN,SIE_ARCTIC_IN,MONTHS_IN,PLOTFLAG):
+def scatter_tas_SIE_linreg(TAS_ARCTIC_IN,SIE_ARCTIC_IN,MONTHS_IN,PLOTFLAG,MODEL):
     import calendar
     slopes_all = []
     r_all = []
     if PLOTFLAG == True:
-        fig = plt.figure()
+        fig = plt.figure(figsize=(12,5))
     for m,mi in enumerate(MONTHS_IN):
         CESM_airtemp_mi = TAS_ARCTIC_IN[mi::12].values
-        CESM_extent_mi = SIE_ARCTIC_IN[mi::12].values
+        CESM_extent_mi = SIE_ARCTIC_IN[mi::12].isel(time=slice(0,165)).values
         monthname = calendar.month_name[mi+1]
 
         slope,intercept,r_value, p_value, std_err = stats.linregress(CESM_airtemp_mi,CESM_extent_mi/1e12)
@@ -113,6 +113,7 @@ def scatter_tas_SIE_linreg(TAS_ARCTIC_IN,SIE_ARCTIC_IN,MONTHS_IN,PLOTFLAG):
             #print("slope: %f  " % (slope))
             ax.set_xlabel('Temp (K)')
             ax.set_ylabel('SIE (millions km$^2$)')
+            fig.suptitle(MODEL)
 
     if PLOTFLAG == True:
         plt.show()
