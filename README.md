@@ -1,35 +1,18 @@
-# CMIP6 Hackathon Project Template
+# CMIP6 Hackathon Project:Sea ice sensitivity to temperature in CMIP6 Models
 
-[This template](https://github.com/cmip6hack/project-template) provides a starting point for [CMIP6 Hackathon](https://cmip6hack.github.io/#/) projects.
+CMIP6 Hackathon UW  
+October 2019  
+Robin Clancy, Maddie Smith, Katie Brennan, and Ed Blanchard 
+  
+#### Motivation:
+The state of global sea ice is strongly related to changes in the mean temperature. This is in part a result of the sea ice-albedo feedback, which amplities ice loss with increases in Arctic air temperature. 
+Various studies have shown that Arctic sea ice loss is underestimated when compared to observations in previous CMIPs (i.e. Stroeve et al., 2012). It's unclear if this is due to differences in Arctic warming or differences in the sensitivity of sea ice concentrations to warming.
 
-### What's included?
+#### Goals:
+Here we aim to quantify the senstivity between Arctic surface air temperature and sea ice across different models. We want to investigate: how strong is this relationship, what is the seasonal variation in the relationship, and how much variability is there across models. 
 
-1. `catalogs`: data catalogs that can be used by Intake-ESM.
-1. `environments`: Conda environment files for the NCAR/Google Cloud deployments.
-1. `notebooks`: a place for storing Jupyter Notebooks.
-1. `README.md`: this document - consider modifying to make it a description of your project on GitHub.
-1. `LICENSE`: a default (MIT) license file for your project. You can change this if you feel the need.
+### Where is our analysis so far?
 
-### How to use this Template
+Most of our results so far are in a combined notebook in the following location: 
 
-Project leads should follow the next four steps. This only needs to be done once.
-
-1. Navigate to https://github.com/cmip6hack/project-template
-2. Click the "Use this template" button
-3. Name your project (consider prepending with "cmip6hack", so something like `cmip6hack-myproject`)
-4. Provide a brief description
-5. Tell your teammates where to find your repository and tell them to "Fork" the project.
-
-Once the initial setup is done, everyone will want to clone the repository onto the compute system they plan to use for the hackathon.
-
-1. Open a JupyterLab session on the system you plan to use.
-1. Open a terminal in the JupyterLab environment.
-1. Clone your project: `git clone https://github.com/username/cmip6hack-myproject.git`
-1. Get to work!
-
-
-### How to make your project citable
-
-[Zenodo](https://about.zenodo.org/) is a data archiving tool that can help make your project citable by assigning a DOI to the project's GitHub repository.
-
-Follow the guidelines here https://guides.github.com/activities/citable-code
+1. Navigate to https://github.com/kbren/cmip6-seaice-temp-sensitivity/blob/Katie/notebooks/combined_notebook.ipynb
