@@ -1,4 +1,5 @@
-# CMIP6 Hackathon Project:Sea ice sensitivity to temperature in CMIP6 Models
+# CMIP6 Hackathon Project:
+## Sea ice sensitivity to temperature in CMIP6 Models
 
 CMIP6 Hackathon UW  
 October 2019  
